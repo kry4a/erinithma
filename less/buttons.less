@@ -1,0 +1,114 @@
+@import "colors";
+@import "constants";
+@import "mixins";
+
+.button {
+  display: inline-block;
+  padding: 8px 24px;
+  border: 1px solid white;
+  border-radius: 6px;
+
+  font-family: "Exo 2", "Arial", sans-serif;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+
+  transition: all @transition-duration;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--14px {
+    font-size: 14px;
+  }
+
+  &--big {
+    padding: 10px 17px;
+    margin: 10px 0;
+    font-size: 14px;
+    letter-spacing: -0.38px;
+  }
+
+  &--green {
+    color: @color-green;
+    border-color: @color-green;
+
+    &:hover {
+      color: white;
+      background-color: @color-green;
+    }
+
+    &:active {
+      opacity: .8;
+    }
+  }
+
+  &--blue {
+    color: white;
+    border-color: @color-blue;
+    background-color: @color-blue;
+
+    &:hover {
+      color: white;
+      background-color: @color-blue;
+      opacity: .9;
+    }
+
+    &:active {
+      opacity: .8;
+    }
+  }
+
+  &--brown {
+    color: @color-brown;
+    border-color: @color-brown;
+
+    &:hover {
+      color: white;
+      background-color: @color-brown;
+    }
+
+    &:active {
+      opacity: .8;
+    }
+  }
+
+  &--orange {
+    color: @color-orange;
+    border-color: @color-orange;
+
+    &:hover {
+      color: white;
+      background-color: @color-orange;
+    }
+
+    &:active {
+      opacity: .8;
+    }
+  }
+
+  &--wide {
+    width: 100%;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--light {
+    font-weight: 400;
+  }
+
+  &--tall {
+    line-height: 1.5;
+  }
+}

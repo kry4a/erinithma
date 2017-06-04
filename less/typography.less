@@ -1,0 +1,94 @@
+@import "colors";
+@import "mixins";
+@import "constants";
+
+@sans-serif: "Exo 2", "Arial", sans-serif;
+
+body {
+  font-family: @sans-serif;
+}
+
+h1,h2,h3,h4 {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: 500;
+  
+  &--big {
+    font-weight: 900;
+  }
+
+  &--small {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &--light {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  &--logo {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+  }
+  
+  &--lined {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+    
+    &:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 25px;
+      height: 2px;
+      background-color: white;
+      transition: all @transition-duration;
+    }
+  }
+
+  .addColorModifiers();
+
+}
+
+
+p {
+  margin: 0;
+}
+
+.text {
+  font-size: 14px;
+  font-family: @sans-serif;
+  line-height: 1.25;
+  font-weight: 400;
+  color: @color-text;
+  text-decoration: none;
+
+  &--light {
+    color: @color-text-light;
+  }
+
+  &--big {
+    font-size: 24px;
+  }
+
+  &--small {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .addColorModifiers();
+
+}
