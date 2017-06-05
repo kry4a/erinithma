@@ -41,6 +41,12 @@ h1,h2,h3,h4 {
     line-height: 21px;
   }
   
+  &--promo {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
   &--lined {
     display: inline-block;
     position: relative;
@@ -69,6 +75,10 @@ p {
 }
 
 .text {
+  display: block;
+  
+  margin-bottom: 15px;
+
   font-size: 14px;
   font-family: @sans-serif;
   line-height: 1.25;
@@ -87,6 +97,10 @@ p {
   &--small {
     font-size: 12px;
     font-weight: 500;
+  }
+
+  &--nomargin {
+    margin: 0;
   }
 
   .addColorModifiers();

@@ -5,11 +5,11 @@
 }
 main {
   min-width: 320px;
-  max-width: 640px;
 }
 
 .container {
 	max-width: 640px;
+	position: relative;
 }
 
 .section {
@@ -22,13 +22,35 @@ main {
 	.addBackgroundColorModifiers();
 
 	&--info {
-		padding-top: 75px;
+		padding: 20% 15px 25px 15px;
 	}
+	
+	&--promo {
+		padding: 45px 20px 90px 20px;
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 22px;
+			left: 50%;
+			transform: translate(-50%,0);
+			width: 23px;
+			height: 23px;
+			background: url(img/accordion/star.svg) no-repeat;
+		}
+	}
+	&--footer {
+		padding: 45px 15px;
+	}
+
 }
 
 
 .block {
 	text-align: center;
+	
+	padding-top: 45px;
 
 	&__picture-container {
 		overflow: hidden;
@@ -56,7 +78,7 @@ main {
   right: 50%;
   z-index: 4;
   transform: translate(170%, -50%);
-
+  
   &__slide {
     background-color: white;
     box-shadow: 0 2px 4px rgba(81, 81, 81, 0.5);
@@ -68,4 +90,91 @@ main {
 }
 .info-image {
 	position: absolute;
+	left: 0;
+	top:0;
+	width:100%;
+}
+
+.promo {
+	
+	&__picture-container {
+		text-align: center;
+	}
+
+	&__picture {
+		margin-bottom: 30px;
+	}
+}
+
+table, tbody {
+	width: 100%;
+}
+.table {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+	text-align: center;
+	background-color: @color-dark-blue;
+	color: white;
+	box-shadow: 0 2px 4px rgba(119, 119, 119, 0.5);
+
+	margin-bottom: 15px;
+
+	tr:nth-child(even) > td {
+		background-color: @color-light-blue;
+	}
+	
+	&__tr {
+		border: 1px solid white;
+		font-size: 14px;
+		&:first-child,&:last-child {
+			font-size: 18px;
+		}
+	}
+	&__td {
+		padding: 15px;
+		width: 100%;
+	}
+
+
+ }
+
+.feedback {
+	padding: 15px 20px;
+	background-color: #ffffff;
+	box-shadow: 0 2px 4px rgba(119, 119, 119, 0.5);
+
+	text-align: center;
+
+	&__form * + *{
+		margin-top: 13px;
+	}
+
+	.text {
+		margin-bottom: 25px;
+	}
+}
+
+.copyright {
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+	color: #ffffff;
+	font-size: 12px;
+}
+
+.input-text {
+	display: block;
+	width: 100%;
+	padding: 9px 16px;
+	border: 1px solid @color-blue;
+	border-radius: 6px;
+	box-sizing: border-box;
+	line-height: 1.25;
+
+	&:hover,
+	&:active,
+	&:focus {
+		outline: none;
+	}
 }
