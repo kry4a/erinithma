@@ -8,7 +8,7 @@ main {
 }
 
 .container {
-	max-width: 640px;
+	//max-width: 640px;
 	position: relative;
 }
 
@@ -20,6 +20,11 @@ main {
 	overflow: hidden;
 
 	.addBackgroundColorModifiers();
+	
+
+	&--hovered {
+		background-image: radial-gradient(circle at center, rgba(255, 255, 255, .4) 0%, transparent 100%);
+	}
 
 	&--info {
 		padding: 20% 15px 25px 15px;
@@ -53,6 +58,7 @@ main {
 	padding-top: 45px;
 
 	&__picture-container {
+		display: inline-block;
 		overflow: hidden;
 		min-width: 250px;
 		max-width: 500px;
