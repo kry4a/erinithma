@@ -12,6 +12,9 @@ main {
 	position: relative;
 }
 
+.header {
+	position: relative;
+}
 .section {
 	position: relative;
 	
@@ -182,5 +185,69 @@ table, tbody {
 	&:active,
 	&:focus {
 		outline: none;
+	}
+}
+
+.nav {
+	z-index: 2;
+	padding: 35px;
+	
+	background-color: #ffffff;
+
+	&--fixed {
+		position: fixed;
+		top:10px;
+		right: 10px;
+
+		display: none;
+	}
+	
+	&--active {
+		display: block;
+	}
+	
+	&__menu.menu {
+		margin-bottom: 30px;
+	}
+	
+	&__info {
+		font-size: 18px;
+		line-height: 22px;
+		color: #656565;
+	}
+
+	&__close {
+		position: absolute;
+		right: 15px;
+		top: 15px;
+		width: 14px;
+		height: 14px;
+		background: url('./img/close.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		cursor: pointer;
+	}
+}
+
+.menu {
+	display: block;
+
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+
+	&__item {
+		
+	}
+
+	&__link {
+		display: block;
+		color:#13aad1;
+		font-size: 24px;
+		line-height: 29px;
+		font-weight: normal;
+		text-decoration: none;
+		margin-bottom: 10px;
 	}
 }

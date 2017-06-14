@@ -8,13 +8,29 @@
 
 		<link rel="stylesheet" href="libs.css">
 		<link rel="stylesheet" href="bundle.css">
-		
-		<script src="libs.js"></script>
 </head>
 <body>
 	<main>
+		<nav id="nav" class="nav nav--fixed">
+			<ul class="menu nav__menu">
+				<li class="menu__item">
+					<a href="#portfolio" data-anchor="portfolio" class="menu__link scrolled">Портфолио</a>
+				</li>
+				<li class="menu__item">
+					<a href="#about-us" data-anchor="about-us" class="menu__link scrolled">О студии</a>
+				</li>
+				<li class="menu__item">
+					<a href="#prices" data-anchor="prices" class="menu__link scrolled">Стоимость</a>
+				</li> 
+			</ul>
+			<div class="nav__info">8 (812) 444-44-33</div>
+			<div id="close" class="nav__close"></div>
+		</nav>
 		<section class="section section--blue section--hovered">
-			<h1 class="heading heading--logo heading--white">Under construction</h1>
+			<div class="header">
+				<h1 class="heading heading--logo heading--white">Under construction</h1>	
+				<a href="#" class="btn--toggle" id="btn--toggle"></a>
+			</div>
 			<div class="container block">
 				<div class="block__picture-container">
 					<img class="block__picture" src="img/1.png" alt="Портфолио">
@@ -27,7 +43,7 @@
 					</div>
 					<div class="block__link">
 						<h2 class="heading">
-							<a class="button button--big button--white" href="#">Портфолио</a>
+							<a class="button button--big button--white scrolled" href="#portfolio" data-anchor="portfolio">Портфолио</a>
 						</h2>
 					</div>
 				</div>
@@ -46,7 +62,7 @@
 					</div>
 					<div class="block__link">
 						<h2 class="heading">
-							<a class="button button--big button--white" href="#">О студии</a>
+							<a class="button button--big button--white scrolled" href="#about-us" data-anchor="about-us">О студии</a>
 						</h2>
 					</div>
 				</div>
@@ -65,13 +81,13 @@
 					</div>
 					<div class="block__link">
 						<h2 class="heading">
-							<a class="button button--big button--white" href="#"> Стоимость и сроки</a>
+							<a class="button button--big button--white scrolled" href="#prices" data-anchor="prices"> Стоимость и сроки</a>
 						</h2>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="section section--green section--info">
+		<section class="section section--green section--info" id="portfolio">
 			<img src="./img/evo-telecom.png" alt="" class="info-image">
 			<div class="container">
 				<article class="info__slide">
@@ -152,7 +168,7 @@
 				</article>
 			</div>
 		</section>
-		<section class="section section--blue section--promo">
+		<section class="section section--blue section--promo" id="about-us">
 			<div class="container promo">
 				<div class="promo__wrapper">
 					<div class="promo__picture-container">
@@ -213,7 +229,7 @@
 			</div>
 		</section>
 	</main>
-	<footer class="section section--blue section--footer">
+	<footer class="section section--blue section--footer" id="prices">
 		<div class="container">
 			<table class="table">
 				<tbody>
@@ -221,13 +237,13 @@
 						<td class="table__td">Landing</td>
 					</tr>
 					<tr class="table__tr">
-						<td class="table__td">Анализ рынка и проработка УТП</td>
+						<td class="table__td">Анализ рынка. Формулировка целей и УТП страницы</td>
 					</tr>
 					<tr class="table__tr">
 						<td class="table__td">Современный дизайн</td>
 					</tr>
 					<tr class="table__tr">
-						<td class="table__td">Понятный, цепляющий текст</td>
+						<td class="table__td">Понятные, цепляющие тексты</td>
 					</tr>
 					<tr class="table__tr">
 						<td class="table__td">1 месяц</td>
@@ -244,16 +260,16 @@
 			<table class="table">
 				<tbody>
 					<tr class="table__tr">
-						<td class="table__td">Магазин</td>
+						<td class="table__td">Интернет-магазин</td>
 					</tr>
 					<tr class="table__tr">
-						<td class="table__td">Анализ рынка и проработка УТП</td>
+						<td class="table__td">Проработка семантического ядра и внутренней структуры магазина</td>
 					</tr>
 					<tr class="table__tr">
-						<td class="table__td">Современный дизайн</td>
+						<td class="table__td">Оптимизация внешнего вида</td>
 					</tr>
 					<tr class="table__tr">
-						<td class="table__td">Понятный, цепляющий текст</td>
+						<td class="table__td">Подключение функциональных модулей</td>
 					</tr>
 					<tr class="table__tr">
 						<td class="table__td">2,5 месяца</td>
@@ -273,13 +289,13 @@
 						<td class="table__td">Корпоративный сайт</td>
 					</tr>
 					<tr class="table__tr">
-						<td class="table__td">Анализ рынка и проработка УТП</td>
+						<td class="table__td">Разработка индивидуального проекта сайтв</td>
 					</tr>
 					<tr class="table__tr">
-						<td class="table__td">Современный дизайн</td>
+						<td class="table__td">Прорисовка сложных интерфейсов</td>
 					</tr>
 					<tr class="table__tr">
-						<td class="table__td">Понятный, цепляющий текст</td>
+						<td class="table__td">Интегрирование сайта в экосистему компании</td>
 					</tr>
 					<tr class="table__tr">
 						<td class="table__td">от 2 месяцев</td>
@@ -308,5 +324,6 @@
 		</div>
 		<div class="copyright">justgo@under-const.ru. 2017</div>
 	</footer>
+	<script src="bundle.js" type="text/javascript"></script>
 </body>
 </html>
